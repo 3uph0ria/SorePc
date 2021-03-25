@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3093BAEA-8B32-4D04-BF88-69737741D24B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HardCP</RootNamespace>
+    <AssemblyName>HardCP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.0.2422, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.0\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.0.0.2422, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.0.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\ApplicationConfig.cs" />
+    <Compile Include="Classes\CurrentUser.cs" />
+    <Compile Include="Classes\NavManager.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\Account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageAddEditService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageBasket.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageClients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageClientService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageServices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SignIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Users.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Admins.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Categoris.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Clients.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClientService.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FurnitureOrders.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Permissions.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Services.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Account.xaml.cs">
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAddEditService.xaml.cs">
+      <DependentUpon>PageAddEditService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageBasket.xaml.cs">
+      <DependentUpon>PageBasket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageClients.xaml.cs">
+      <DependentUpon>PageClients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageClientService.xaml.cs">
+      <DependentUpon>PageClientService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageReports.xaml.cs">
+      <DependentUpon>PageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageServices.xaml.cs">
+      <DependentUpon>PageServices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SignIn.xaml.cs">
+      <DependentUpon>SignIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Users.xaml.cs">
+      <DependentUpon>Users.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Models\DataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\DataModel.edmx.diagram">
+      <DependentUpon>DataModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\manikyur.jpg" />
+    <Resource Include="Img\logo.png" />
+    <Resource Include="Img\korrektsiya_i_okrashivaniye_brovey.jpg" />
+    <Resource Include="Img\dnevnoy_makiyazh.jpg" />
+    <Resource Include="Img\Zhenskaya_strizhka.jpg" />
+    <Resource Include="Img\vecherniy_makiyazh.jpg" />
+    <Resource Include="Img\uvelicheniye_gub.jpg" />
+    <Resource Include="Img\ukladka.jpg" />
+    <Resource Include="Img\pilingi_i_maski_dlya_litsa.jpg" />
+    <Resource Include="Img\pedikyur.jpg" />
+    <Resource Include="Img\okrashivaniye.jpg" />
+    <Resource Include="Img\massazh_spiny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\d7b59ddd06c09e84eabde7374beae138c9dfd190d6b004b5da7b5c5b2299c453.jpg" />
+    <Resource Include="Resources\f1fcea76ac514c06d30bef78d0a4b6bc9bc13259952abcae40ad6349f3b570ba.jpg" />
+    <Resource Include="Resources\a08a35fb774d2f1ca95d9e60a7b8663f95c522fada5ca215385348e03b73183d.jpg" />
+    <Resource Include="Resources\c05040f3acd015003f9ce5409de4b901235be8d8e7bd74c9bc2bbdb0206a5f6a.jpg" />
+    <Resource Include="Resources\fc1ee4a47dc4a1740799e996bf0d478f8908764c5f55f176f6b0bc0ca5f5eef2.jpg" />
+    <Resource Include="Resources\f5e3e25ee873734c254c67838ff48d667951117aa0121b99c7ed60d703622cd8.jpg" />
+    <Resource Include="Resources\e3de7268e80c6c29808a80438f5d0ffed82bab5163a5d6ae29784075b4f4f130.jpg" />
+    <Resource Include="Resources\34b9617f8668ccafabcf8fa19052e133a17c4625ecf5011dc971217a2c982227.jpg" />
+    <Resource Include="Resources\7066e7384bbb5d383f2fa61e4958cb56a70f3c231cd76b01f0bb356390c2e8cd.jpg" />
+    <Resource Include="Resources\b6af5b05a877b212cc9e16a323c147b1a0d0e659f6882e5a84a0acc9e6519c96.jpg" />
+    <Resource Include="Resources\784cc4980a12f477bfedf2ea75ac4cdc8fbd299f856aeb32f134a3d264882a1d.jpg" />
+    <Resource Include="Resources\07bc559e01583e9d9896cd179b0fcf76d514a351ce521a9d4d20b9862643901e.jpg" />
+    <Resource Include="Resources\b1b1f24e1992917dbc76a1d702e635bdf83aafc3f0bd72f267ce3830fb08408f.jpg" />
+    <Resource Include="Resources\d5c050579f0a328e446d453646c010da9850a4776cbfd9b880b2b148fe8bc2ad.jpg" />
+    <Resource Include="Resources\b3db802d951703cbd32895f168140b7a76d3dd817acb7de6b8716d52b77c747a.jpg" />
+    <Resource Include="Resources\bca25e316641338951aac2625ef1e8e7b25e33415de47b95013fa82ee54b3479.jpg" />
+    <Resource Include="Resources\5a5b9518c7985de972a2cea80eb99403ef8e4a5d5c40427103c328883c61a0a2.jpg" />
+    <Resource Include="Resources\907bf69866a5592d2a92732fef8e99e4f91d83c3c763c13351dba3b29cfaa5e6.png" />
+    <Resource Include="Resources\2aa8fa1b0b93b56aff2790c6e7da7832530da2ce8c1dbc2ef1fed3d9b537e414.jpg" />
+    <Resource Include="Resources\3dc301b22c9480add1b0994730dd0fd826f9a23304466f75c0fdf7acbfc241d6.png" />
+    <Resource Include="Resources\d1ff60fa20426f9348212b9759a78103a050c9ca4fcde646f0c950f69af07caf.jpg" />
+    <Resource Include="Resources\b4ffd9fedf3ff9bbbebea88b5dd0c0b9568307fa1d30b6476899d0319820399e.jpg" />
+    <Resource Include="Resources\ec66703c3ca04bc499be2515bfb5842ac2206068e906493fc8d0a29d4b9a14cb.png" />
+    <Resource Include="Resources\f0209bab84ac654416ae5b1a7652ca08e3bd10355a5c7c2208cda398b6b35467.jpg" />
+    <Resource Include="Resources\bd50f305ad4da44a46e000d14a7361dc0cb9dd4f71006acf96ebef54a5153b0d.jpg" />
+    <Resource Include="Resources\7d2b7667660f2c68e0e6d556b1d782f28dc0ef6e27a50b067783c7d772b729f1.jpg" />
+    <Resource Include="Resources\f1ee82d9032c6a2d27d0a375fb3d2d49022f8b9f057bf86185ecabf7d600125a.jpg" />
+    <Resource Include="Resources\bb5484935a3d270c49125d983fb0a3e03f05e9bd94897b178cc502c5e6673f76.jpg" />
+    <Resource Include="Resources\d40b11f4fb119f98233a7ff6dd30b74f5cda3c69b3f076d30349ffe73877a448.jpg" />
+    <Resource Include="Resources\2370fbcd34fde2e65cd3025a2a33c8dfe0571386f8347cf079af1e81bdb503e6.jpg" />
+    <Resource Include="Resources\515e3d64851e52ca7d28640a8dc74039681330386de90ca24b7b923b6839e8ca.jpg" />
+    <Resource Include="Resources\c9974d6c92a2f6c3329c453a00c22081aef22d10df4bb855623c0b558a8dfaf8.jpg" />
+    <Resource Include="Resources\106289d1ccf3db99dcb4fe85bd6c16f6e656b9f7791d01d0a07f5a0f77c815df.jpg" />
+    <Resource Include="Resources\a876daf8699263bc99a7688b5da5765a3c8b6cfb81e43fb7f0eb059fe66e3bc2.jpg" />
+    <Resource Include="Resources\cb9d62f0e3388b9f0ae1d7fa3f04f36c937092d646d352355d727faf34fd43b3.jpg" />
+    <Resource Include="Resources\8a1484fdaaccc24f10665791e0f38854f6604c4add309a469436db9dda49957a.jpg" />
+    <Resource Include="Resources\5275c5779afbaa463aff981fa828c88955c0e9f7b4ea53fe9a19954cca07388a.jpg" />
+    <Resource Include="Resources\6824e8474e1e3130f7c5d7f1a0a6d59038fb4d0c0da02900eefbe9c99da6a74b.jpg" />
+    <Resource Include="Resources\beae745d997d5de7c3094e7e926587d72a33b9ab8a29a8516f84193606ce4711.jpg" />
+    <Resource Include="Resources\cce7f231250f3f54578c764049b1820755d2d1ccffe73d0a713b6463323b52af.jpg" />
+    <Resource Include="Resources\3cf970a862ab56af21d897d04f02bd7b2304e9072f1945e63b039da056047d74.jpg" />
+    <Resource Include="Resources\8451b9c8016421f0d5765deac693397c5ac9c252c80d3e9bb2f04425cb46f166.jpg" />
+    <Resource Include="Resources\4510360f5b32f574bbdf98379f29e26430606cf88eaa139b284743cc9fad3938.jpg" />
+    <Resource Include="Resources\a7120e3f26f8eed336bcb28b88083d051349dc624ab0403a062cb20b98a616d5.jpg" />
+    <Resource Include="Resources\8c784cb93790095ecc834ce9015a3dec9bd46b4a67972b525eaeab37c3f9012b.jpg" />
+    <Resource Include="Resources\5ae25b75d795c924990cd5aef50fe3399d15666e02ee0646ee0b4e768cb2e2f0.jpg" />
+    <Resource Include="Resources\dc3941d304d0fc17f8ad0a32134f89eb500d8875eb44a84fd681e95ddabc1a0e.jpg" />
+    <Resource Include="Resources\0564c79c8d1a2074071b8096500b5d19ba908160a6742f97ff614366520516e8.jpg" />
+    <Resource Include="Resources\e23a5707beaaa0a0b866c37cffde7c3a61c643c700fd1be47cdc0dca92509860.jpg" />
+    <Resource Include="Resources\8700cde5b6249567bf7b9747454bf509af171dbc8e25e723a62fff682016b6d2.jpg" />
+    <Resource Include="Resources\0c0a377f0758e25bd644bea7dedafed48a9ac0c82256f041657d44587675be65.jpg" />
+    <Resource Include="Resources\6f1b20748da8d0959fc1c405e0e41f59faa6a5f3add1858fee1d4cfe58045eda.jpg" />
+    <Resource Include="Resources\a3fb42d41f42c30ce99392f6348d12d0cc9a4ce636e29f77d249dee1296fa5f0.jpg" />
+    <Resource Include="Resources\baa33254bfd5938551dbf616d4330495c884f853f4e76e8f3481283ddff11dbc.jpg" />
+    <Resource Include="Resources\388d249f2647a68a2a5281c68ff6df754843fcf3c433ba22ef257b228b715574.jpg" />
+    <Resource Include="Resources\4bf1bc030fc168c8b1dd36898cf61643632ed556ecae0542e9b74b93ce3ec526.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Models\DataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+      <LastGenOutput>DataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+      <LastGenOutput>DataModel.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Resources\logo12.png" />
+    <Resource Include="Resources\logo12.ico" />
+    <Resource Include="Resources\logo11.png" />
+    <Resource Include="Resources\logo11.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

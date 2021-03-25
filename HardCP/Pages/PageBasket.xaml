@@ -1,0 +1,218 @@
+﻿<Page x:Class="HardCP.Pages.PageBasket"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HardCP.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+      Title="PageBasket">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <materialDesign:ColorZone
+              Mode="Custom"
+                Background="#FFF44336"
+              Padding="16">
+            <DockPanel>
+
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Button VerticalAlignment="Center"
+                                Name="BtnBack"
+                                Click="BtnBack_Click"
+                                Style="{DynamicResource MaterialDesignToolButton}">
+                        <materialDesign:PackIcon
+                                Kind="ArrowLeft"
+                                Height="14" />
+                    </Button>
+                    <TextBlock
+                    Foreground="White"
+                    VerticalAlignment="Center"
+                    Margin="16 0 0 0"
+                    Text="Progress" />
+                    <materialDesign:ColorZone
+                        Mode="Standard"
+                        Padding="8 4 8 4"
+                        CornerRadius="2"
+                        Panel.ZIndex="1"
+                        Margin="16 0 0 0"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                     Width="Auto" />
+                                <ColumnDefinition
+                                    Width="*" />
+                                <ColumnDefinition
+                                     Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button
+                                VerticalAlignment="Center"
+                                Style="{DynamicResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon
+                                Kind="Search"
+                                 Opacity=".56" RenderTransformOrigin="0.812,-1.125" Height="14" />
+                            </Button>
+                            <TextBox
+                                Name="Search"
+                                Grid.Column="1"
+                                Margin="8 0 0 0"
+                                materialDesign:HintAssist.Hint="Поиск"
+                                materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                BorderThickness="0"
+                                MinWidth="200"
+                                VerticalAlignment="Center" />
+                        </Grid>
+
+                    </materialDesign:ColorZone>
+                    <ComboBox
+                        Width="200"
+                        Margin="16 0 0 0"
+                        Name="SortCategory"
+                        Foreground="White"
+                        materialDesign:HintAssist.Hint="Категория">
+
+                        <ComboBoxItem
+                            Content="Все" />
+                        <ComboBoxItem
+                            Content="HDD" />
+                        <ComboBoxItem
+                            Content="SSD" />
+                        <ComboBoxItem
+                            Content="Блоки питания" />
+                        <ComboBoxItem
+                            Content="Видеокарты" />
+                        <ComboBoxItem
+                            Content="Воздушное охлождение" />
+                        <ComboBoxItem
+                            Content="Жидкостное охлождение" />
+                        <ComboBoxItem
+                            Content="Курпуса" />
+                        <ComboBoxItem
+                            Content="Материнки" />
+                        <ComboBoxItem
+                            Content="Оперативка" />
+                        <ComboBoxItem
+                            Content="Процессоры" />
+                    </ComboBox>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+        <TextBlock
+        Grid.Row="1"
+        Margin="10 0 0 0"
+        VerticalAlignment="Center"
+        Text="Корзина"
+        Style="{StaticResource MaterialDesignHeadline5TextBlock}" />
+        <ListView x:Name="ListServices" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Left" Grid.Row="2">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Vertical" HorizontalAlignment="Center"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <materialDesign:Card
+                        Width="725">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="250" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="266"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Image
+                              Source="{Binding Img}"
+                              Height="250"
+                              Margin="5"
+                              Width="266"
+                              Stretch="UniformToFill" />
+                            <StackPanel
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                Margin="8 10 8 0">
+                                <TextBlock
+                                Text="{Binding Name}"
+                                Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                                    Margin="0 0 0 10"
+                                    FontWeight="Bold">
+                                </TextBlock>
+                                <TextBlock
+  Style="{StaticResource MaterialDesignHeadline6TextBlock}"                                    TextWrapping="Wrap"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding Cost, StringFormat={} Стоимость {0}₽}" />
+                                <TextBlock
+  Style="{StaticResource MaterialDesignHeadline6TextBlock}"                                    TextWrapping="Wrap"
+                                    Margin="0 0 0 10"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding Categoris.Name, StringFormat={} Категория: {0}}" />
+                                <TextBlock
+                                     Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
+                                      TextWrapping="Wrap"
+                                      VerticalAlignment="Stretch"
+                                      MinWidth="280"
+                                      materialDesign:HintAssist.Hint="Multiline text"
+                                      Height="80"
+                                      Margin="0 0 0 10"
+                                      Text="{Binding Description}" />
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                    <Button Content="УБРАИТЬ ИЗ КОРЗИНЫ" Margin="0 0 20 0" Style="{StaticResource MaterialDesignOutlinedButton}" Name="BtnDel" Click="BtnDelService_Click" />
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:Card>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel  Grid.Row="3" Orientation="Vertical ">
+            <TextBlock
+                VerticalAlignment="Center"
+               
+                Margin="10 0 20 10"
+                Name="currentCost"
+                Text="Итого"
+                Style="{StaticResource MaterialDesignHeadline5TextBlock}" />
+            <StackPanel Orientation="Horizontal">
+                <TextBox 
+            Name="FullName"
+            Style="{StaticResource MaterialDesignFilledTextBox}"
+            VerticalAlignment="Center"
+            Width="250"
+             Margin="10 0 10 0"
+            AcceptsReturn="True"
+            TextWrapping="Wrap"
+            materialDesign:HintAssist.Hint="ФИО"
+            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}" />
+            <TextBox 
+            Name="Phone"
+            Style="{StaticResource MaterialDesignFilledTextBox}"
+            VerticalAlignment="Center"
+            Width="250"
+             Margin="10 0 20 0"
+            AcceptsReturn="True"
+            TextWrapping="Wrap"
+            materialDesign:HintAssist.Hint="Телефон"
+            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}" />
+            <Button Content="Заказать" Name="AddOrder" Click="AddOrder_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Page>
