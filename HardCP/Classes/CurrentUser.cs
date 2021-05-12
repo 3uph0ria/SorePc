@@ -17,5 +17,6 @@ namespace HardCP.Classes
         public static bool AccessServices { get; set; }
         public static bool AccessClientsServicrs { get; set; }
         public static bool AccessReport { get; set; }
+        public static string platform { get; set; }
     }
 }

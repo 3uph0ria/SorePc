@@ -23,6 +23,7 @@ TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <TextBlock VerticalAlignment="Center"  Grid.Row="0"
         Text="Добавление/редактирование товара"
@@ -78,7 +79,20 @@ TextElement.Foreground="{DynamicResource MaterialDesignBody}"
             Margin="0 0 20 0"
             IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}" />
 
-        <StackPanel VerticalAlignment="Center" Grid.Row="5"  HorizontalAlignment="Center" Orientation="Horizontal">
+        <TextBox 
+            Grid.Row="5"
+            Name="Quantity"
+            Text="{Binding Quantity}"
+            Width="600"
+            Style="{StaticResource MaterialDesignFilledTextBox}"
+            VerticalAlignment="Center"
+            AcceptsReturn="True"
+            TextWrapping="Wrap"
+            materialDesign:HintAssist.Hint="Количество"
+            Margin="0 0 20 0"
+            IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}" />
+
+        <StackPanel VerticalAlignment="Center" Grid.Row="7"  HorizontalAlignment="Center" Orientation="Horizontal">
         <Button Name="BtnAddservice" Click="BtnAddservice_Click" Content="Добавить" ></Button>
     </StackPanel>
     </Grid>

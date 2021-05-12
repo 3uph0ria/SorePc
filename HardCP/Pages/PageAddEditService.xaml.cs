@@ -45,7 +45,7 @@ namespace HardCP.Pages
             try
             {
                 ShopPCEntities.GetContext().SaveChanges();
-                MessageBox.Show("Услуга успешно сохранена");
+                MessageBox.Show("Товар успешно сохранен");
                 NavManager.AccountFrame.Navigate(new PageServices(NavManager.BtnServices.Content + ""));
             }
             catch (DbEntityValidationException ex)

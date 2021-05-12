@@ -52,34 +52,7 @@ namespace HardCP.Pages
             CountService.Badge = CurrentUser.currentServices.Count.ToString();
 
             var services = ShopPCEntities.GetContext().Services.ToList();
-
-            switch (SortCategory.SelectedIndex)
-            {
-                case 0:
-                    services = services.ToList();
-                    break;
-                case 1:
-                    services = services.Where(p => Convert.ToString(p.Categoris.Name).Contains("HDD")).ToList(); break;
-                case 2:
-                    services = services.Where(p => Convert.ToString(p.IdCategory).Contains("2")).ToList(); break;
-                case 3:
-                    services = services.Where(p => Convert.ToString(p.IdCategory).Contains("3")).ToList(); break;
-                case 4:
-                    services = services.Where(p => Convert.ToString(p.IdCategory).Contains("4")).ToList(); break;
-                case 5:
-                    services = services.Where(p => Convert.ToString(p.IdCategory).Contains("5")).ToList(); break;
-                case 6:
-                    services = services.Where(p => Convert.ToString(p.IdCategory).Contains("6")).ToList(); break;
-                case 7:
-                    services = services.Where(p => Convert.ToString(p.IdCategory).Contains("7")).ToList(); break;
-                case 8:
-                    services = services.Where(p => Convert.ToString(p.IdCategory).Contains("8")).ToList(); break;
-                case 9:
-                    services = services.Where(p => Convert.ToString(p.IdCategory).Contains("9")).ToList(); break;
-                case 10:
-                    services = services.Where(p => Convert.ToString(p.Categoris.Name).Contains("Процессоры")).ToList(); break;
-            }
-
+            services = services.Where(p => p.Platforms.Name.ToLower().Contains(CurrentUser.platform.ToLower())).ToList();
             services = services.Where(p => p.Name.ToLower().Contains(Search.Text.ToLower())).ToList();
             ListServices.ItemsSource = services;
             
@@ -131,6 +104,11 @@ namespace HardCP.Pages
         {
             Categoris selectCategory = (sender as Button).DataContext as Categoris;
             var services = ShopPCEntities.GetContext().Services.ToList();
+
+            // сортировка для intel & amd
+            if(selectCategory.Name == "Процессоры")
+                services = services.Where(p => p.Platforms.Name.ToLower().Contains(CurrentUser.platform.ToLower())).ToList();
+
             services = services.Where(p => Convert.ToString(p.Categoris.Name).Contains(selectCategory.Name)).ToList();
             ListServices.ItemsSource = services;
         }

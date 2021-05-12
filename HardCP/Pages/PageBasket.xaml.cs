@@ -53,7 +53,7 @@ namespace HardCP.Pages
                 return;
             }
 
-            MessageBox.Show(FullName +", Ваш заказ успешно сформирован, скоро Вам перезвонит администратор");
+            MessageBox.Show(FullName.Text +", Ваш заказ успешно сформирован, скоро Вам перезвонит администратор");
         }
 
         private void BtnDelService_Click(object sender, RoutedEventArgs e)

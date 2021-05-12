@@ -65,7 +65,7 @@
                                 Style="{DynamicResource MaterialDesignToolButton}">
                                 <materialDesign:PackIcon
                                 Kind="Search"
-                                 Opacity=".56" RenderTransformOrigin="0.812,-1.125" Height="14" /> 
+                                 Opacity=".56" RenderTransformOrigin="0.812,-1.125" Height="14" />
                             </Button>
                             <TextBox
                                 Name="Search"
@@ -78,40 +78,9 @@
                                 MinWidth="200"
                                 VerticalAlignment="Center" />
                         </Grid>
-                        
+
                     </materialDesign:ColorZone>
-                    <ComboBox
-                        Width="200"
-                        Margin="16 0 0 0"
-                        Name="SortCategory"
-                        Foreground="White"
-                        SelectionChanged="ComboBox_SelectionChanged"
-                        materialDesign:HintAssist.Hint="Категория">
-                        
-                        <ComboBoxItem
-                            Content="Все" />
-                        <ComboBoxItem
-                            Content="HDD" />
-                        <ComboBoxItem
-                            Content="SSD" />
-                        <ComboBoxItem
-                            Content="Блоки питания" />
-                        <ComboBoxItem
-                            Content="Видеокарты" />
-                        <ComboBoxItem
-                            Content="Воздушное охлождение" />
-                        <ComboBoxItem
-                            Content="Жидкостное охлождение" />
-                        <ComboBoxItem
-                            Content="Курпуса" />
-                        <ComboBoxItem
-                            Content="Материнки" />
-                        <ComboBoxItem
-                            Content="Оперативка" />
-                        <ComboBoxItem
-                            Content="Процессоры" />
-                    </ComboBox>
-                        
+
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <materialDesign:Badged Name="CountService" Badge="1">
