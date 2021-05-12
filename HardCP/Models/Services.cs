@@ -21,14 +21,17 @@ namespace HardCP.Models
         }
     
         public int Id { get; set; }
+        public int IdPlatform { get; set; }
         public int IdCategory { get; set; }
         public string Name { get; set; }
         public int Cost { get; set; }
         public string Img { get; set; }
         public string Description { get; set; }
+        public Nullable<int> Quantity { get; set; }
     
         public virtual Categoris Categoris { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClientService> ClientService { get; set; }
+        public virtual Platforms Platforms { get; set; }
     }
 }

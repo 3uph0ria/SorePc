@@ -53,16 +53,25 @@
     <Property Name="AccessClientService" Type="int" Nullable="false" />
     <Property Name="AccessReports" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Platforms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="Services">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPlatform" Type="int" Nullable="false" />
     <Property Name="IdCategory" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="Cost" Type="int" Nullable="false" />
     <Property Name="Img" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="Description" Type="nvarchar" MaxLength="1500" />
+    <Property Name="Quantity" Type="int" />
   </EntityType>
   <Association Name="FK_Admins_Permissions">
     <End Role="Permissions" Type="Self.Permissions" Multiplicity="1" />
@@ -124,6 +133,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Services_Platforms">
+    <End Role="Platforms" Type="Self.Platforms" Multiplicity="1" />
+    <End Role="Services" Type="Self.Services" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Platforms">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Services">
+        <PropertyRef Name="IdPlatform" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Хранилище ShopPCModelContainer">
     <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Categoris" EntityType="Self.Categoris" Schema="dbo" store:Type="Tables" />
@@ -131,6 +152,7 @@
     <EntitySet Name="ClientService" EntityType="Self.ClientService" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FurnitureOrders" EntityType="Self.FurnitureOrders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Permissions" EntityType="Self.Permissions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Platforms" EntityType="Self.Platforms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Admins_Permissions" Association="Self.FK_Admins_Permissions">
       <End Role="Permissions" EntitySet="Permissions" />
@@ -150,6 +172,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_Services_Categoris" Association="Self.FK_Services_Categoris">
       <End Role="Categoris" EntitySet="Categoris" />
+      <End Role="Services" EntitySet="Services" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Services_Platforms" Association="Self.FK_Services_Platforms">
+      <End Role="Platforms" EntitySet="Platforms" />
       <End Role="Services" EntitySet="Services" />
     </AssociationSet>
   </EntityContainer>

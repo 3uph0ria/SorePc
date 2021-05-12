@@ -104,11 +104,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageBuildSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageClients.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageClientService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PagePlatformSelection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -163,6 +171,9 @@
     <Compile Include="Models\Permissions.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Platforms.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Services.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -175,11 +186,17 @@
     <Compile Include="Pages\PageBasket.xaml.cs">
       <DependentUpon>PageBasket.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageBuildSelection.xaml.cs">
+      <DependentUpon>PageBuildSelection.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageClients.xaml.cs">
       <DependentUpon>PageClients.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageClientService.xaml.cs">
       <DependentUpon>PageClientService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PagePlatformSelection.xaml.cs">
+      <DependentUpon>PagePlatformSelection.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageReports.xaml.cs">
       <DependentUpon>PageReports.xaml</DependentUpon>
@@ -304,7 +321,6 @@
     <Resource Include="Resources\388d249f2647a68a2a5281c68ff6df754843fcf3c433ba22ef257b228b715574.jpg" />
     <Resource Include="Resources\4bf1bc030fc168c8b1dd36898cf61643632ed556ecae0542e9b74b93ce3ec526.jpg" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Models\DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -316,6 +332,12 @@
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\intel.png" />
+    <Resource Include="Resources\build2.png" />
+    <Resource Include="Resources\build1.png" />
+    <Resource Include="Resources\amd.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Resources\logo12.png" />
     <Resource Include="Resources\logo12.ico" />
     <Resource Include="Resources\logo11.png" />

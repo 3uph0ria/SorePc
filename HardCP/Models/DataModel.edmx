@@ -58,16 +58,25 @@
           <Property Name="AccessClientService" Type="int" Nullable="false" />
           <Property Name="AccessReports" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="Platforms">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Services">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdPlatform" Type="int" Nullable="false" />
           <Property Name="IdCategory" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="Cost" Type="int" Nullable="false" />
           <Property Name="Img" Type="nvarchar" MaxLength="150" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="1500" />
+          <Property Name="Quantity" Type="int" />
         </EntityType>
         <Association Name="FK_Admins_Permissions">
           <End Role="Permissions" Type="Self.Permissions" Multiplicity="1" />
@@ -129,6 +138,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Services_Platforms">
+          <End Role="Platforms" Type="Self.Platforms" Multiplicity="1" />
+          <End Role="Services" Type="Self.Services" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platforms">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Services">
+              <PropertyRef Name="IdPlatform" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Хранилище ShopPCModelContainer">
           <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Categoris" EntityType="Self.Categoris" Schema="dbo" store:Type="Tables" />
@@ -136,6 +157,7 @@
           <EntitySet Name="ClientService" EntityType="Self.ClientService" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FurnitureOrders" EntityType="Self.FurnitureOrders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Permissions" EntityType="Self.Permissions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Platforms" EntityType="Self.Platforms" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Admins_Permissions" Association="Self.FK_Admins_Permissions">
             <End Role="Permissions" EntitySet="Permissions" />
@@ -155,6 +177,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_Services_Categoris" Association="Self.FK_Services_Categoris">
             <End Role="Categoris" EntitySet="Categoris" />
+            <End Role="Services" EntitySet="Services" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Services_Platforms" Association="Self.FK_Services_Platforms">
+            <End Role="Platforms" EntitySet="Platforms" />
             <End Role="Services" EntitySet="Services" />
           </AssociationSet>
         </EntityContainer>
@@ -224,18 +250,29 @@
           <Property Name="AccessReports" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Admins" Relationship="Self.FK_Admins_Permissions" FromRole="Permissions" ToRole="Admins" />
         </EntityType>
+        <EntityType Name="Platforms">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Services" Relationship="Self.FK_Services_Platforms" FromRole="Platforms" ToRole="Services" />
+        </EntityType>
         <EntityType Name="Services">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPlatform" Type="Int32" Nullable="false" />
           <Property Name="IdCategory" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Cost" Type="Int32" Nullable="false" />
           <Property Name="Img" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Int32" />
           <NavigationProperty Name="Categoris" Relationship="Self.FK_Services_Categoris" FromRole="Services" ToRole="Categoris" />
           <NavigationProperty Name="ClientService" Relationship="Self.FK_ClientService_Services" FromRole="Services" ToRole="ClientService" />
+          <NavigationProperty Name="Platforms" Relationship="Self.FK_Services_Platforms" FromRole="Services" ToRole="Platforms" />
         </EntityType>
         <Association Name="FK_Admins_Permissions">
           <End Role="Permissions" Type="Self.Permissions" Multiplicity="1" />
@@ -297,6 +334,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Services_Platforms">
+          <End Role="Platforms" Type="Self.Platforms" Multiplicity="1" />
+          <End Role="Services" Type="Self.Services" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platforms">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Services">
+              <PropertyRef Name="IdPlatform" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="ShopPCEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admins" />
           <EntitySet Name="Categoris" EntityType="Self.Categoris" />
@@ -304,6 +353,7 @@
           <EntitySet Name="ClientService" EntityType="Self.ClientService" />
           <EntitySet Name="FurnitureOrders" EntityType="Self.FurnitureOrders" />
           <EntitySet Name="Permissions" EntityType="Self.Permissions" />
+          <EntitySet Name="Platforms" EntityType="Self.Platforms" />
           <EntitySet Name="Services" EntityType="Self.Services" />
           <AssociationSet Name="FK_Admins_Permissions" Association="Self.FK_Admins_Permissions">
             <End Role="Permissions" EntitySet="Permissions" />
@@ -324,6 +374,10 @@
           <AssociationSet Name="FK_ClientService_Services" Association="Self.FK_ClientService_Services">
             <End Role="Services" EntitySet="Services" />
             <End Role="ClientService" EntitySet="ClientService" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Services_Platforms" Association="Self.FK_Services_Platforms">
+            <End Role="Platforms" EntitySet="Platforms" />
+            <End Role="Services" EntitySet="Services" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -391,15 +445,25 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Platforms">
+            <EntityTypeMapping TypeName="ShopPCModel.Platforms">
+              <MappingFragment StoreEntitySet="Platforms">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Services">
             <EntityTypeMapping TypeName="ShopPCModel.Services">
               <MappingFragment StoreEntitySet="Services">
                 <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdPlatform" ColumnName="IdPlatform" />
                 <ScalarProperty Name="IdCategory" ColumnName="IdCategory" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Cost" ColumnName="Cost" />
                 <ScalarProperty Name="Img" ColumnName="Img" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

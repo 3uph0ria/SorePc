@@ -89,7 +89,7 @@ namespace HardCP.Pages
 
         private void BtnSignInUser_Click(object sender, RoutedEventArgs e)
         {
-            NavManager.MainFrame.Navigate(new Users());
+            NavManager.MainFrame.Navigate(new PageBuildSelection());
         }
 
         private void BtnRefreshCapcha_Click(object sender, RoutedEventArgs e)

@@ -363,6 +363,16 @@ namespace HardCP.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap amd {
+            get {
+                object obj = ResourceManager.GetObject("amd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b1b1f24e1992917dbc76a1d702e635bdf83aafc3f0bd72f267ce3830fb08408f {
             get {
                 object obj = ResourceManager.GetObject("b1b1f24e1992917dbc76a1d702e635bdf83aafc3f0bd72f267ce3830fb08408f", resourceCulture);
@@ -446,6 +456,26 @@ namespace HardCP.Properties {
         internal static System.Drawing.Bitmap beae745d997d5de7c3094e7e926587d72a33b9ab8a29a8516f84193606ce4711 {
             get {
                 object obj = ResourceManager.GetObject("beae745d997d5de7c3094e7e926587d72a33b9ab8a29a8516f84193606ce4711", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap build1 {
+            get {
+                object obj = ResourceManager.GetObject("build1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap build2 {
+            get {
+                object obj = ResourceManager.GetObject("build2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -616,6 +646,16 @@ namespace HardCP.Properties {
         internal static System.Drawing.Bitmap fc1ee4a47dc4a1740799e996bf0d478f8908764c5f55f176f6b0bc0ca5f5eef2 {
             get {
                 object obj = ResourceManager.GetObject("fc1ee4a47dc4a1740799e996bf0d478f8908764c5f55f176f6b0bc0ca5f5eef2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap intel {
+            get {
+                object obj = ResourceManager.GetObject("intel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

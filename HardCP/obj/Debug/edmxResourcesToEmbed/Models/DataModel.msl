@@ -60,15 +60,25 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Platforms">
+      <EntityTypeMapping TypeName="ShopPCModel.Platforms">
+        <MappingFragment StoreEntitySet="Platforms">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Services">
       <EntityTypeMapping TypeName="ShopPCModel.Services">
         <MappingFragment StoreEntitySet="Services">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdPlatform" ColumnName="IdPlatform" />
           <ScalarProperty Name="IdCategory" ColumnName="IdCategory" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Cost" ColumnName="Cost" />
           <ScalarProperty Name="Img" ColumnName="Img" />
           <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

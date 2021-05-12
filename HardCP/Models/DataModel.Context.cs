@@ -39,6 +39,7 @@ namespace HardCP.Models
         public virtual DbSet<ClientService> ClientService { get; set; }
         public virtual DbSet<FurnitureOrders> FurnitureOrders { get; set; }
         public virtual DbSet<Permissions> Permissions { get; set; }
+        public virtual DbSet<Platforms> Platforms { get; set; }
         public virtual DbSet<Services> Services { get; set; }
     }
 }

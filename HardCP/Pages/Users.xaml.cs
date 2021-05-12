@@ -27,6 +27,7 @@ namespace HardCP.Pages
         {
             InitializeComponent();
             Update();
+            ListButtons.ItemsSource = ShopPCEntities.GetContext().Categoris.ToList();
         }
 
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
@@ -124,6 +125,14 @@ namespace HardCP.Pages
         private void BtnAddOrder_Click(object sender, RoutedEventArgs e)
         {
             NavManager.MainFrame.Navigate(new PageBasket());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Categoris selectCategory = (sender as Button).DataContext as Categoris;
+            var services = ShopPCEntities.GetContext().Services.ToList();
+            services = services.Where(p => Convert.ToString(p.Categoris.Name).Contains(selectCategory.Name)).ToList();
+            ListServices.ItemsSource = services;
         }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Git\StorePC\HardCP\App.xaml
-10-1558970020
+12-580797288
 2-1890902742
-27-1716096726
+301644093290
 251814191092
-MainWindow.xaml;Pages\Account.xaml;Pages\PageAddEditService.xaml;Pages\PageBasket.xaml;Pages\PageClients.xaml;Pages\PageClientService.xaml;Pages\PageReports.xaml;Pages\PageServices.xaml;Pages\SignIn.xaml;Pages\Users.xaml;
+MainWindow.xaml;Pages\Account.xaml;Pages\PageAddEditService.xaml;Pages\PageBasket.xaml;Pages\PageBuildSelection.xaml;Pages\PageClients.xaml;Pages\PageClientService.xaml;Pages\PagePlatformSelection.xaml;Pages\PageReports.xaml;Pages\PageServices.xaml;Pages\SignIn.xaml;Pages\Users.xaml;
 
 False
 

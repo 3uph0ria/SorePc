@@ -89,3 +89,8 @@ D:\Git\StorePC\HardCP\obj\Debug\HardCP.csproj.CoreCompileInputs.cache
 D:\Git\StorePC\HardCP\obj\Debug\HardCP.csproj.CopyComplete
 D:\Git\StorePC\HardCP\obj\Debug\HardCP.exe
 D:\Git\StorePC\HardCP\obj\Debug\HardCP.pdb
+D:\Git\StorePC\HardCP\obj\Debug\HardCP.csprojAssemblyReference.cache
+D:\Git\StorePC\HardCP\obj\Debug\Pages\PageBuildSelection.g.cs
+D:\Git\StorePC\HardCP\obj\Debug\Pages\PagePlatformSelection.g.cs
+D:\Git\StorePC\HardCP\obj\Debug\Pages\PageBuildSelection.baml
+D:\Git\StorePC\HardCP\obj\Debug\Pages\PagePlatformSelection.baml

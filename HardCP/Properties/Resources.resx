@@ -130,6 +130,9 @@
   <data name="a876daf8699263bc99a7688b5da5765a3c8b6cfb81e43fb7f0eb059fe66e3bc2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\a876daf8699263bc99a7688b5da5765a3c8b6cfb81e43fb7f0eb059fe66e3bc2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="amd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\amd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="b1b1f24e1992917dbc76a1d702e635bdf83aafc3f0bd72f267ce3830fb08408f" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\b1b1f24e1992917dbc76a1d702e635bdf83aafc3f0bd72f267ce3830fb08408f.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +159,12 @@
   </data>
   <data name="beae745d997d5de7c3094e7e926587d72a33b9ab8a29a8516f84193606ce4711" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\beae745d997d5de7c3094e7e926587d72a33b9ab8a29a8516f84193606ce4711.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="build1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\build1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="build2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\build2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="c05040f3acd015003f9ce5409de4b901235be8d8e7bd74c9bc2bbdb0206a5f6a" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\c05040f3acd015003f9ce5409de4b901235be8d8e7bd74c9bc2bbdb0206a5f6a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -207,6 +216,9 @@
   </data>
   <data name="fc1ee4a47dc4a1740799e996bf0d478f8908764c5f55f176f6b0bc0ca5f5eef2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fc1ee4a47dc4a1740799e996bf0d478f8908764c5f55f176f6b0bc0ca5f5eef2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="intel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\intel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo11.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
