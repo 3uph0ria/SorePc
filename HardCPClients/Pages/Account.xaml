@@ -119,15 +119,6 @@
 
                             <StackPanel
                     Orientation="Horizontal">
-                                <Button VerticalAlignment="Center"
-                                        Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
-                                        Style="{DynamicResource MaterialDesignToolButton}"
-                                        CommandParameter="{x:Static Dock.Left}"
-                                     ToolTip="MaterialDesignFloatingActionAccentButton">
-                                    <materialDesign:PackIcon
-                                    Kind="Menu"
-                                    Height="14" />
-                                    </Button>
                                 <TextBlock
                                     Foreground="White"
                                     VerticalAlignment="Center"

@@ -28,6 +28,14 @@ namespace HardCP.Pages
             DGridClients.ItemsSource = ShopPCEntities.GetContext().Clients.ToList();
         }
 
+        public void Update()
+        {
+            var services = ShopPCEntities.GetContext().Clients.ToList();
+            services = services.Where(p => p.Fullname.ToLower().Contains(Search.Text.ToLower())).ToList();
+            DGridClients.ItemsSource = services;
+
+        }
+
         private void BtnEditClient_Click(object sender, RoutedEventArgs e)
         {
 
@@ -41,6 +49,11 @@ namespace HardCP.Pages
         private void BtndelClient_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Update();
         }
     }
 }

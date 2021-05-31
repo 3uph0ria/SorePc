@@ -29,6 +29,7 @@ TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Text="Header"
         Style="{StaticResource MaterialDesignHeadline5TextBlock}" />
         <TextBox
+            TextChanged="Search_TextChanged"
             Grid.Row="1"
             Name="Search"
             Style="{StaticResource MaterialDesignFilledTextBox}"

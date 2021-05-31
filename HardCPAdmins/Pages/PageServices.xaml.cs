@@ -29,6 +29,14 @@ namespace HardCP.Pages
             Header.Text = header;
         }
 
+        public void Update()
+        {
+            var services = ShopPCEntities.GetContext().Services.ToList();
+            services = services.Where(p => p.Name.ToLower().Contains(Search.Text.ToLower())).ToList();
+            DGridServices.ItemsSource = services;
+
+        }
+
         private void BtnEditService_Click(object sender, RoutedEventArgs e)
         {
             NavManager.AccountFrame.Navigate(new PageAddEditService((sender as Button).DataContext as Services));
@@ -56,6 +64,11 @@ namespace HardCP.Pages
                     MessageBox.Show(ex.ToString());
                 }
             }
+        }
+
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Update();
         }
     }
 }

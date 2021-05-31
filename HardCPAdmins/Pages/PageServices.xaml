@@ -35,6 +35,7 @@ TextElement.Foreground="{DynamicResource MaterialDesignBody}"
             VerticalAlignment="Center"
             AcceptsReturn="True"
             TextWrapping="Wrap"
+            TextChanged="Search_TextChanged"
             materialDesign:HintAssist.Hint="Поиск"
             IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}" />
         <DataGrid Grid.Row="2" Name="DGridServices" AutoGenerateColumns="False" IsReadOnly="True">

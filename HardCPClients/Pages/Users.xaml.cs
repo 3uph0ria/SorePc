@@ -27,6 +27,19 @@ namespace HardCP.Pages
         {
             InitializeComponent();
             Update();
+            ListCurrentServices.ItemsSource = CurrentUser.currentServices;
+            ListCurrentServices.Items.Refresh();
+            if (CurrentUser.currentCost != 0)
+            {
+                AllCost.Text = "Итог: " + CurrentUser.currentCost;
+                BtnAddOrder.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                AllCost.Text = "";
+                BtnAddOrder.Visibility = Visibility.Hidden;
+            }
+            CountService.Badge = CurrentUser.currentServices.Count.ToString();
         }
 
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
