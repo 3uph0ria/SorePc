@@ -31,14 +31,7 @@
 
                 <StackPanel
                     Orientation="Horizontal">
-                    <Button VerticalAlignment="Center"
-                                Name="BtnBack"
-                                Click="BtnBack_Click"
-                                Style="{DynamicResource MaterialDesignToolButton}">
-                        <materialDesign:PackIcon
-                                Kind="ArrowLeft"
-                                Height="14" />
-                    </Button>
+                    
                     <TextBlock
                     Foreground="White"
                     VerticalAlignment="Center"
@@ -226,7 +219,9 @@
                                     VerticalAlignment="Center"
                                     Margin="5"
                                     Text="{Binding Cost, StringFormat={} Стоимость {0}₽}" />
-                                    <Button Margin="5" Name="BtnDel" Click="BtnDel_Click" Grid.Row="1" Content="УДАЛИТЬ"></Button>
+                                    <StackPanel Orientation="Horizontal">
+                                    <Button Margin="5" Name="BtnDel" Click="BtnDel_Click" Content="УДАЛИТЬ"></Button>
+                                    </StackPanel>
                                 </StackPanel>
                             </Grid>
                     </DataTemplate>

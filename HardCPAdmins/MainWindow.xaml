@@ -14,7 +14,7 @@
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" Icon="Resources/logo12.ico">
+     FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" Icon="Resources/logo12.ico" WindowState="Maximized">
     <Grid>
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
