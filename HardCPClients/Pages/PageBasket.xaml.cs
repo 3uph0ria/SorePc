@@ -54,6 +54,43 @@ namespace HardCP.Pages
             }
 
             MessageBox.Show(FullName.Text +", Ваш заказ успешно сформирован, скоро Вам перезвонит администратор");
+
+            var clients = ShopPCEntities.GetContext().Clients.ToList();
+            clients = clients.Where(p => p.Fullname.Contains(FullName.Text)).ToList();
+            var client = clients.FirstOrDefault();
+
+            if(client == null)
+            {
+                Clients currnetClient = new Clients();
+                currnetClient.Fullname = FullName.Text;
+                currnetClient.Phone = Phone.Text;
+                ShopPCEntities.GetContext().Clients.Add(currnetClient);
+                ShopPCEntities.GetContext().SaveChanges();
+                var newClients = ShopPCEntities.GetContext().Clients.ToList();
+                var newClient = newClients.LastOrDefault();
+
+                foreach(var component in CurrentUser.currentServices)
+                {
+                    ClientService newSellService = new ClientService();
+                    newSellService.IdService = component.Id;
+                    newSellService.IdClient = newClient.Id;
+                    newSellService.Date = DateTime.Now;
+                    ShopPCEntities.GetContext().ClientService.Add(newSellService);
+                    ShopPCEntities.GetContext().SaveChanges();
+                }
+            }
+            else
+            {
+                foreach (var component in CurrentUser.currentServices)
+                {
+                    ClientService newSellService = new ClientService();
+                    newSellService.IdService = component.Id;
+                    newSellService.IdClient = client.Id;
+                    newSellService.Date = DateTime.Now;
+                    ShopPCEntities.GetContext().ClientService.Add(newSellService);
+                    ShopPCEntities.GetContext().SaveChanges();
+                }
+            }
         }
 
         private void BtnDelService_Click(object sender, RoutedEventArgs e)

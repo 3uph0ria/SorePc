@@ -118,18 +118,20 @@
                 <ColumnDefinition Width="70*"></ColumnDefinition>
                 <ColumnDefinition Width="30*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <ListView Name="ListButtons" HorizontalAlignment="Center">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Vertical" HorizontalAlignment="Center"></WrapPanel>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Button Width="200" Content="{Binding Name}" Click="Button_Click"></Button>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <ScrollViewer>
+                <StackPanel Orientation="Vertical">
+                <Button Margin="10" Content="Процессоры" Name="Btn1" Click="Btn1_Click"></Button>
+                <Button Margin="10" Content="Материнские платы" Name="Btn2" Click="Btn2_Click"></Button>
+                <Button Margin="10" Content="HDD" Name="Btn3" Click="Btn3_Click"></Button>
+                <Button Margin="10" Content="SSD" Name="Btn4" Click="Btn4_Click"></Button>
+                <Button Margin="10" Content="Блоки питания" Name="Btn5" Click="Btn5_Click"></Button>
+                <Button Margin="10" Content="Видеокарты" Name="Btn6" Click="Btn6_Click"></Button>
+                <Button Margin="10" Content="Воздушное охлаждение" Name="Btn7" Click="Btn7_Click"></Button>
+                <Button Margin="10" Content="Жидкостное охлаждение" Name="Btn8" Click="Btn8_Click"></Button>
+                <Button Margin="10" Content="Корпуса" Name="Btn9" Click="Btn9_Click"></Button>
+                <Button Margin="10" Content="ОЗУ" Name="Btn10" Click="Btn10_Click"></Button>
+            </StackPanel>
+            </ScrollViewer>
             <ListView Grid.Column="1" x:Name="ListServices" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Left" Grid.RowSpan="2">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -224,6 +226,7 @@
                                     VerticalAlignment="Center"
                                     Margin="5"
                                     Text="{Binding Cost, StringFormat={} Стоимость {0}₽}" />
+                                    <Button Margin="5" Name="BtnDel" Click="BtnDel_Click" Grid.Row="1" Content="УДАЛИТЬ"></Button>
                                 </StackPanel>
                             </Grid>
                     </DataTemplate>
