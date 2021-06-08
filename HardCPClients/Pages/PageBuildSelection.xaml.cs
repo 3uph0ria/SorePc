@@ -28,7 +28,7 @@ namespace HardCP.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            NavManager.MainFrame.Navigate(new PageReadyPC());
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

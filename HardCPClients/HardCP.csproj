@@ -120,6 +120,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageReadyPC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageReports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -197,6 +201,9 @@
     </Compile>
     <Compile Include="Pages\PagePlatformSelection.xaml.cs">
       <DependentUpon>PagePlatformSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageReadyPC.xaml.cs">
+      <DependentUpon>PageReadyPC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageReports.xaml.cs">
       <DependentUpon>PageReports.xaml</DependentUpon>
@@ -332,6 +339,16 @@
       <DependentUpon>DataModel.edmx</DependentUpon>
       <LastGenOutput>DataModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\SBK0096672_v01_b.jpg" />
+    <Resource Include="Resources\SBK0113505_v01_b.jpg" />
+    <Resource Include="Resources\SBK0116309_v01_b.jpg" />
+    <Resource Include="Resources\Снимок.PNG" />
+    <Resource Include="Resources\SBK0113775_v01_b.jpg" />
+    <Resource Include="Resources\1498489_v02_b.jpg" />
+    <Resource Include="Resources\SBK0098401_v01_b.jpg" />
+    <Resource Include="Resources\SBK0115228_v01_b.jpg" />
+    <Resource Include="Resources\aba65beed5332e9ee482a62962833c0c3c3f04ce8d35f14990aac6c291aba799.jpg" />
+    <Resource Include="Resources\6553925de09ef8c0a45bd74d0ba045b5f39f75c3bc686604a3b4ef448f72da4f.jpg" />
     <Resource Include="Resources\intel.png" />
     <Resource Include="Resources\build2.png" />
     <Resource Include="Resources\build1.png" />

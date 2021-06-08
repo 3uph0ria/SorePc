@@ -103,6 +103,16 @@ namespace HardCP.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1498489_v02_b {
+            get {
+                object obj = ResourceManager.GetObject("_1498489_v02_b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2370fbcd34fde2e65cd3025a2a33c8dfe0571386f8347cf079af1e81bdb503e6 {
             get {
                 object obj = ResourceManager.GetObject("_2370fbcd34fde2e65cd3025a2a33c8dfe0571386f8347cf079af1e81bdb503e6", resourceCulture);
@@ -216,6 +226,16 @@ namespace HardCP.Properties {
         internal static System.Drawing.Bitmap _5ae25b75d795c924990cd5aef50fe3399d15666e02ee0646ee0b4e768cb2e2f0 {
             get {
                 object obj = ResourceManager.GetObject("_5ae25b75d795c924990cd5aef50fe3399d15666e02ee0646ee0b4e768cb2e2f0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6553925de09ef8c0a45bd74d0ba045b5f39f75c3bc686604a3b4ef448f72da4f {
+            get {
+                object obj = ResourceManager.GetObject("_6553925de09ef8c0a45bd74d0ba045b5f39f75c3bc686604a3b4ef448f72da4f", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +376,16 @@ namespace HardCP.Properties {
         internal static System.Drawing.Bitmap a876daf8699263bc99a7688b5da5765a3c8b6cfb81e43fb7f0eb059fe66e3bc2 {
             get {
                 object obj = ResourceManager.GetObject("a876daf8699263bc99a7688b5da5765a3c8b6cfb81e43fb7f0eb059fe66e3bc2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aba65beed5332e9ee482a62962833c0c3c3f04ce8d35f14990aac6c291aba799 {
+            get {
+                object obj = ResourceManager.GetObject("aba65beed5332e9ee482a62962833c0c3c3f04ce8d35f14990aac6c291aba799", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -696,6 +726,76 @@ namespace HardCP.Properties {
         internal static System.Drawing.Bitmap logo121 {
             get {
                 object obj = ResourceManager.GetObject("logo121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SBK0096672_v01_b {
+            get {
+                object obj = ResourceManager.GetObject("SBK0096672_v01_b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SBK0098401_v01_b {
+            get {
+                object obj = ResourceManager.GetObject("SBK0098401_v01_b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SBK0113505_v01_b {
+            get {
+                object obj = ResourceManager.GetObject("SBK0113505_v01_b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SBK0113775_v01_b {
+            get {
+                object obj = ResourceManager.GetObject("SBK0113775_v01_b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SBK0115228_v01_b {
+            get {
+                object obj = ResourceManager.GetObject("SBK0115228_v01_b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SBK0116309_v01_b {
+            get {
+                object obj = ResourceManager.GetObject("SBK0116309_v01_b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок {
+            get {
+                object obj = ResourceManager.GetObject("Снимок", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -144,3 +144,5 @@ D:\Git\StorePC\HardCPClients\obj\Debug\HardCP.csproj.CoreCompileInputs.cache
 D:\Git\StorePC\HardCPClients\obj\Debug\HardCP.csproj.CopyComplete
 D:\Git\StorePC\HardCPClients\obj\Debug\HardCP.exe
 D:\Git\StorePC\HardCPClients\obj\Debug\HardCP.pdb
+D:\Git\StorePC\HardCPClients\obj\Debug\Pages\PageReadyPC.g.cs
+D:\Git\StorePC\HardCPClients\obj\Debug\Pages\PageReadyPC.baml
