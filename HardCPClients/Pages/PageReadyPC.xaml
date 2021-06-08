@@ -80,11 +80,13 @@
         Margin="10 0 0 0"
         VerticalAlignment="Center"
         Text="каталог"
+             Foreground="#FFF"
         Style="{StaticResource MaterialDesignHeadline5TextBlock}" />
         <TextBlock
         HorizontalAlignment="Right"
         Grid.Row="1"
         Margin="0 0 10 0"
+            Foreground="#FFF"
         VerticalAlignment="Center"
         Text="корзина"
         Style="{StaticResource MaterialDesignHeadline5TextBlock}" />
@@ -103,10 +105,11 @@
                     <DataTemplate>
                         <materialDesign:Card
                         Width="725">
+                            
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition
-                                    Height="250" />
+                                     />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="266"></ColumnDefinition>
@@ -118,11 +121,13 @@
                               Margin="5"
                               Width="266"
                               Stretch="UniformToFill" />
-                                <StackPanel
+                                
+                                    <StackPanel
                                 Grid.Column="1"
                                 Grid.Row="0"
                                 Margin="8 10 8 0">
-                                    <TextBlock
+                                    
+                                        <TextBlock
                                 Text="{Binding Name}"
                                 Style="{StaticResource MaterialDesignHeadline6TextBlock}"
                                     Margin="0 0 0 10"
@@ -137,22 +142,26 @@
                                     Margin="0 0 0 10"
                                     VerticalAlignment="Center"
                                     Text="{Binding Categoris.Name, StringFormat={} Категория: {0}}" />
-                                    <TextBlock
+                                    <ScrollViewer Height="100">
+                                        <TextBlock
                                      Style="{StaticResource MaterialDesignSubtitle2TextBlock}"
                                       TextWrapping="Wrap"
                                       VerticalAlignment="Stretch"
                                       MinWidth="280"
                                       materialDesign:HintAssist.Hint="Multiline text"
-                                      Height="80"
                                       Margin="0 0 0 10"
                                       Text="{Binding Description}" />
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            </ScrollViewer>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
                                         <Button Content="ЗАКАЗАТь" Margin="0 0 20 0" Style="{StaticResource MaterialDesignOutlinedButton}" Name="BtnOrder" Click="BtnOrder_Click" />
                                         <Button Content="В КОРЗИНУ" Name="BtnAddBasket" Click="BtnAddBasket_Click" />
 
                                     </StackPanel>
+                                
                                 </StackPanel>
+                                
                             </Grid>
+                            
                         </materialDesign:Card>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -198,6 +207,7 @@
                 <StackPanel Orientation="Horizontal" Grid.Row="1">
                     <TextBlock
                 Text=""
+                         Foreground="#FFF"
                 VerticalAlignment="Center"
                 Name="AllCost"
                 Style="{StaticResource MaterialDesignSubtitle1TextBlock}"

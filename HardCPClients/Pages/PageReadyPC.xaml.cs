@@ -98,7 +98,7 @@ namespace HardCP.Pages
             var itemToRemove = CurrentUser.currentServices.Single(r => r.Id == service.Id);
             CurrentUser.currentServices.Remove(itemToRemove);
 
-            NavManager.MainFrame.Navigate(new Users());
+            NavManager.MainFrame.Navigate(new PageReadyPC());
         }
     }
 }
