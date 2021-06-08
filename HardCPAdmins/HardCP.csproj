@@ -96,6 +96,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageAddEditCLients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageAddEditService.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -179,6 +183,9 @@
     </Compile>
     <Compile Include="Pages\Account.xaml.cs">
       <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageAddEditCLients.xaml.cs">
+      <DependentUpon>PageAddEditCLients.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageAddEditService.xaml.cs">
       <DependentUpon>PageAddEditService.xaml</DependentUpon>

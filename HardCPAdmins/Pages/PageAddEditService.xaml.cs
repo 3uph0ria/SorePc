@@ -28,22 +28,28 @@ namespace HardCP.Pages
             {
                 _ccurrnetServices = selectService;
                 CBoxServices.SelectedItem = selectService.Categoris;
+                CBoxPlatforms.SelectedItem = selectService.Platforms;
             }
                 
             DataContext = _ccurrnetServices;
             CBoxServices.ItemsSource = ShopPCEntities.GetContext().Categoris.ToList();
+            CBoxPlatforms.ItemsSource = ShopPCEntities.GetContext().Platforms.ToList();
         }
 
         private void BtnAddservice_Click(object sender, RoutedEventArgs e)
         {
             Categoris p = (Categoris)CBoxServices.SelectedItem;
+            Platforms o = (Platforms)CBoxPlatforms.SelectedItem;
             _ccurrnetServices.IdCategory = p.Id;
+            _ccurrnetServices.IdPlatform = o.Id;
 
-            if (_ccurrnetServices.Id == 0)
-                ShopPCEntities.GetContext().Services.Add(_ccurrnetServices);
+           
 
             try
             {
+                if (_ccurrnetServices.Id == 0)
+                    ShopPCEntities.GetContext().Services.Add(_ccurrnetServices);
+
                 ShopPCEntities.GetContext().SaveChanges();
                 MessageBox.Show("Товар успешно сохранен");
                 NavManager.AccountFrame.Navigate(new PageServices(NavManager.BtnServices.Content + ""));

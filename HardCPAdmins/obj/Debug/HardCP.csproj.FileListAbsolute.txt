@@ -144,3 +144,5 @@ D:\Git\StorePC\HardCPAdmins\obj\Debug\HardCP.csproj.CoreCompileInputs.cache
 D:\Git\StorePC\HardCPAdmins\obj\Debug\HardCP.csproj.CopyComplete
 D:\Git\StorePC\HardCPAdmins\obj\Debug\HardCP.exe
 D:\Git\StorePC\HardCPAdmins\obj\Debug\HardCP.pdb
+D:\Git\StorePC\HardCPAdmins\obj\Debug\Pages\PageAddEditCLients.g.cs
+D:\Git\StorePC\HardCPAdmins\obj\Debug\Pages\PageAddEditCLients.baml
